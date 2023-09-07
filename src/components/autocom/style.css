@@ -1,0 +1,72 @@
+body {
+  font-family: sans-serif;
+}
+
+
+
+.box{
+  width: 250px;
+  border: 1px solid grey;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 2px 4px 1px rgba(0, 0, 0, .18);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color:rgba(0,0,0,0.73);
+  margin-left: 20px;
+  border-radius: 7px;
+  clear: both;
+}
+
+.box input{
+  width: 250px;
+  border:none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color:rgba(0,0,0,0.73);
+  padding: 5px 5px;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 7px;
+}
+
+.no-suggestions {
+  color: #999;
+  padding: 0.5rem;
+}
+
+
+
+.suggestions{
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border:none;
+  color: rgba(250, 248, 248, 0.73);
+  max-height: 80px;
+  overflow: auto;
+  border-radius: 7px;
+  outline: none;
+  z-index: 999999 !important;
+  
+}
+
+.suggestions::before{
+  content:"";
+}
+
+.suggestions li{
+  padding: 5px 5px;
+  cursor:pointer;
+  height: fit-content;
+} 
+
+.suggestion-active,
+.suggestions li:hover{
+text-decoration: none;
+background-color: #999;
+color: #fff;
+}
+
+.suggestions li:not(:last-of-type) {
+  border-bottom: 1px solid #999;
+}
